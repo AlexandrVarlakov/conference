@@ -1,0 +1,118 @@
+.page-name{
+    background-color: #0206C8;
+    padding: 51px 30px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    @media (max-width: 1024px){
+        padding: 25px 30px;
+        min-height: 135px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    @media (max-width: 360px){
+        padding: 25px 15px;
+    }
+}
+
+.page-name__title{
+    font-weight: 600;
+    font-size: calc(19px + 1.5vw);
+    line-height: 1.25;
+    text-align: center;
+    color: #FFFFFF;
+       
+    @media (max-width: 1024px){
+        font-size: 30px;
+    }
+
+    @media (max-width: 480px){
+        text-align: left;
+    }
+
+}
+
+.page-name__conference{
+    position: absolute;
+    left: 20px;
+    
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.25);;
+    -webkit-text-fill-color: transparent;
+    
+    font-family: $font-family-a;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 96px;
+    z-index: 5;
+
+    bottom: 0;
+    transform: translateY(30%);
+    
+}
+
+.page-name__decoration-1{
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    z-index: 6;
+    background: radial-gradient(64.15% 64.15% at 60.38% 35.85%, #FFFFFF 0%, #B1B1B1 100%);
+    bottom: 22px;
+    left: 345px;
+
+    @media (max-width: 1024px){
+        display: none;
+    }
+}
+
+.page-name__decoration-2{
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    z-index: 6;
+    
+    top: 0;
+    right: 255px;
+    transform: translateY(-49%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .page-name__i-round-1{
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: radial-gradient(64.15% 64.15% at 60.38% 35.85%, #FFFFFF 0%, #B1B1B1 100%);
+        bottom: 0;
+        left: 50%;
+        transform: translateY(12%) translateX(-35px);
+    }
+    
+    .page-name__i-round-2, .page-name__i-round-3{
+        position: absolute;
+        width: 71px;
+        height: 71px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        
+    }
+    
+    .page-name__i-round-3{
+        width: 60px;
+        height: 60px;
+    }
+
+
+    @media (max-width: 1024px){
+        display: none;
+    }
+}
+

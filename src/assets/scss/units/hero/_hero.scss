@@ -1,0 +1,303 @@
+/*Begin: hero section*/
+
+.h-plane{
+    position: absolute;
+    left: 50%;
+    bottom: -170px;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: calc(23.6vw + 380px);
+    max-width: 837px;
+    min-width: 625px;
+    @media (max-width: 1024px){
+        width: 625px;
+    }
+}
+
+
+.hero{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__content{
+    background: linear-gradient(180deg, #0000FE 0%, #0000C5 0.01%, #0F4DEE 100%);
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 25px 30px 7.5vh;
+       
+    position: relative;
+
+    @media (max-width: 1024px){
+        padding: 25px 30px 6vh;
+    }
+    @media (max-width: 360px){
+        padding: 25px 15px 6vh;
+    }
+}
+
+.h-conference{
+    position: absolute;
+    left: 0;
+    writing-mode: vertical-rl; 
+    top: 280px;
+    left: calc(13.5vw - 140px);
+    
+    -webkit-text-stroke: 1px #ADADAD;;
+    -webkit-text-fill-color: transparent;
+    
+    font-family: $font-family-a;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 144px;
+    z-index: 5;
+
+    @media (max-width: 1024px){
+        display: none;
+    }
+    
+}
+
+.h-blue-round-1{
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 50%;
+    left: 15%;
+    top: 12%;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 1024px){
+        left: unset;
+        right: 0;
+        border-color: transparent;
+        transform: translateX(50%);
+    }
+}
+
+.h-blue-round-1__inner{
+    position: absolute;
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    background: linear-gradient(244.05deg, #002863 -81.7%, #0000FF 116.48%);
+    margin: 10px 0px 0 0 ;
+    
+}
+
+
+.h-blue-round-2{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 50%;
+    right: 20%;
+    top: 42%;
+    display: flex;
+    justify-content: center;
+    @media (max-width: 1024px){
+        top: unset;
+        bottom: 0;
+        left: 0;
+        transform: translateY(30%) translateX(-25%);
+    }
+}
+
+.h-blue-round-2__inner{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: linear-gradient(244.05deg, #002863 -81.7%, #0000FF 116.48%);
+    bottom: 5px;
+    right: 10px;
+    
+}
+
+
+.hero__content--inner{
+    width: 100%;
+    max-width: 1170px;
+    position: relative;
+    z-index: 2;
+}
+.hero__title{
+    font-family: $font-family-a;
+    font-weight: bold;
+    font-size: calc(19px + 1.5vw);
+    line-height: 1.25;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 3.25vh;
+   
+    @media (max-width: 1024px){
+        font-size: 30px;
+    }
+
+    @media (max-width: 480px){
+        text-align: left;
+    }
+}
+
+.hero__subtitle{
+    font-family: $font-family-a;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 6.5vh;
+
+    font-size: calc(9px + 1vw);
+    @media (max-width: 1024px){
+        font-size: 18px;
+        margin-bottom: 4vh;
+    }
+    @media (max-width: 480px){
+        text-align: left;
+    }
+}
+
+.hero__date{
+    display: flex;
+    justify-content: center;
+
+    p{
+        font-family: $font-family-a;
+        display: inline-block;
+        font-family: $font-family-a;
+        font-weight: 600;
+        font-size: 1.875rem;
+        line-height: 1.2;
+        text-align: center;
+        background-color: #000;
+        color: #FFFFFF;
+        padding: 5px 10px;
+
+        font-size: calc(11px + 1vw);
+        @media (max-width: 1024px){
+            font-size: 20px;
+        }
+        @media (max-width: 480px){
+            text-align: left;
+        }
+
+    }
+}
+
+.hero__institute{
+    margin: 10px 0;
+}
+
+.hero__institute-fn{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.625rem;
+    line-height: 1.2;
+    text-align: center;
+    font-size: calc(7px + 1vw);
+    @media (max-width: 1024px){
+        font-size: 18px;
+    }
+    color: #FFFFFF;
+    @media (max-width: 480px){
+        text-align: left;
+    }
+
+}
+
+.hero__institute-sn{
+    margin-top: 5px;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    text-align: center;
+    color: #FFFFFF;
+
+    font-size: calc(5px + 1vw);
+    @media (max-width: 1024px){
+        font-size: 14px;
+    }
+    @media (max-width: 480px){
+        text-align: left;
+    }
+    
+}
+
+.hero__detail{
+    display: flex;
+    justify-content: center;
+    margin-top: 6.5vh;
+    @media (max-width: 1024px){
+        margin-top: 6vh;
+    }
+    a{
+        background-color: #fff;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #000000;
+        padding: 19px 94px;
+        transition: 500ms;
+        border: 3px solid #fff;
+        font-size: calc(11px + .7vw);
+        @media (max-width: 1024px){
+            font-size: 18px;
+            width: 100%;
+            padding: 17px 0;
+            max-width: 315px;
+            display: flex;
+            justify-content: center;
+        }
+        &:hover{
+            border-radius: 50px;
+            color: #1F6AF2;;;
+            border-color: #1F6AF2;;
+        }
+
+    }
+}
+
+.hero__next-screen{
+    display: flex;
+    justify-content: center;
+    margin-top: 5.5vh;
+
+    @media (max-width: 1025px){
+        margin-top: 5vh;
+    }
+
+    a{
+        width: 85px;
+        height: 85px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid transparent;
+        border-radius: 50%;
+        transition: 500ms;
+        &:hover{
+            border-color: #fff;
+        }
+    }
+    img{
+        width: 67px;
+        height: 67px;
+
+
+        @media (max-width: 1024px){
+            width: 57px;
+            height: 57px;
+        }
+    }
+}
+/*End: hero section*/
