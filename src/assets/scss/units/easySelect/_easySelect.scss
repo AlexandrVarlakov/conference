@@ -1,0 +1,242 @@
+//parent
+$select-parent-text-color: #555;
+$select-parent-font-weigt: normal;
+$select-parent-font-style: normal;
+$select-parent-font-size: 18px;
+$select-parent-font-family: inherit;
+
+
+//easySelect vars
+
+$select-width: 100%;
+$select-height: 63px;
+$select-border-radius: 5px;
+$select-bg: #ECECEC;
+$select-horz-padding: 15px;
+$select-item-vert-padding: 10px;
+$select-item-horz-padding: 5px;
+$select-border-color: #ECECEC;
+$select-border: 1px solid $select-border-color;
+
+//select-fonts
+$select-font-family: inherit;
+$select-font-size: 20px;
+$select-text-color: #363636;
+$select-font-weight: 600;
+$select-font-style: inherit;
+
+/*select-options*/
+
+$options-bg: #fff;
+$options-border-color: #ECECEC;
+$options-border: 1px solid $options-border-color;
+$options-list-height: 300px;
+$options-between-border-color: #999;
+$options-between-border: 1px solid $options-between-border-color;
+
+//fonts
+$options-font-family: inherit;
+$options-text-color: inherit;
+$options-font-size: inherit;
+$options-font-weight: inherit;
+$options-font-style: inherit;
+
+
+
+$icon-width: 37px;
+$icon-heigth: 37px;
+
+
+$option-hover-bg: rgba($color: #0052b1, $alpha: .2);
+$option-checked-bg: rgba($color: #0052b1, $alpha: .3);
+
+
+
+.easySelect{
+    width: $select-width;
+    position: relative;
+    background-color: $select-bg;
+    border-radius: $select-border-radius;
+    box-sizing: border-box;
+    padding: 0;
+    padding: 0;
+
+    font-family: $select-parent-font-family;
+    color: $select-parent-text-color;
+    font-weight: $select-parent-font-weigt;
+    font-style: $select-parent-font-style;
+    font-size: $select-parent-font-size;
+    
+}
+
+.easySelect[data-state="active"]{
+    z-index: 200;
+
+    .easySelect__vis-value{
+        border-radius: $select-border-radius $select-border-radius 0 0;    
+    }
+}
+
+
+.easySelect__vis-value{
+    width: 100%;
+    height: $select-height;
+
+    display: flex;
+    align-items: center;
+    border: $select-border;
+
+    padding: 0px $select-horz-padding;
+    border-radius: $select-border-radius;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    &::after{
+        content: "";
+        position: absolute;
+        background: #ECECEC;
+        right: 0;
+        width: 40px;
+        height: 100%;
+        top: 0;
+    }
+
+}
+.easySelect__arrow{
+    width: $icon-width;
+    height: $icon-heigth;
+    min-width: $icon-width;
+    min-height: $icon-heigth;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.easySelect__cur-value{
+    font-family: $select-font-family;
+    font-size: $select-font-size;
+    color: $select-text-color;
+    font-weight: $select-font-weight;
+    font-style: $options-font-style;
+    white-space: nowrap;
+    flex-grow: 1;
+    margin-right: 5px;
+    
+    cursor: pointer;
+    box-sizing: border-box;
+
+    @media (max-width: 768px){
+        max-width: 100%;
+        overflow: hidden;  
+        position: absolute; 
+    }
+    
+}
+
+.easySelect__options-list{
+    list-style: none;
+    position: absolute;
+    border: $options-border;
+    border-top: none;
+    width: 100%;
+    border-radius: 0 0 $select-border-radius $select-border-radius;
+    z-index: 99;
+    
+    background-color: $options-bg;
+    transform: scale(1, 0);
+    transform-origin: 0% 0%;
+    transition: 200ms;
+    overflow: hidden;
+    max-height: $options-list-height;
+    overflow-y: auto;
+    scrollbar-width: thin;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.easySelect__options-list[data-state="deploy"]{
+    transform: scale(1, 1);
+}
+
+
+
+
+.easySelect__option{
+    font-family: $options-font-family;
+    font-size: $options-font-size;
+    color: $options-text-color;
+    padding: $select-item-vert-padding $select-item-horz-padding;
+    transition: 200ms;
+    cursor: pointer;
+    box-sizing: border-box;
+    &:hover{
+        background-color: $option-hover-bg ;
+    }
+}
+
+.easySelect__option{
+    &:not(:first-of-type){
+        border-top: $options-between-border;
+    }
+
+    &:last-of-type{
+        border-radius:  0 0 $select-border-radius $select-border-radius;
+    }
+}
+
+.easySelect__option[data-checked="checked"]{
+    background-color: $option-checked-bg;
+    &:hover{
+        background-color: $option-checked-bg;
+    }
+}
+
+.easySelect__options-list[data-hide_checked="true"]{
+    .easySelect__option[data-checked="checked"]{
+        display: none;
+    }
+}
+
+.easySelect__hide-input{
+    max-width: 0;
+    width: 0;
+    max-height: 0;
+    height: 0;
+    border: none;
+    opacity: 0;
+}
+.easySelect__cur-value[data-value =""]{
+    opacity: .6;
+}
+.easySelect__cur-value:not([data-value =""]){
+    &:hover{
+        animation: showSelectValue 16s 1s linear infinite;
+    }
+}
+
+@keyframes showSelectValue{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-90%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+

@@ -1,0 +1,113 @@
+@@include('parts_of_tepmplate/head.html')
+@@include('parts_of_tepmplate/header.html')
+<main >
+    <section class="page-name">
+        <h1 class="page-name__title">Подача материалов</h1>
+
+        <h3 class="page-name__conference">Конференция</h3>
+
+        <div class="page-name__decoration-1"></div>
+        <div class="page-name__decoration-2">
+            <div class="page-name__i-round-1"></div>
+            <div class="page-name__i-round-2">
+                
+            </div>
+            <div class="page-name__i-round-3">
+                
+            </div>
+        </div>
+    </section>
+
+
+    <section class="content section-with-form">
+        <div class="content__inner">
+            <div class="text-block margin-bottom-45">
+                <h2 class="title">Форма подачи материалов</h2>
+                <p class="text margin-v-15"><span class="note-star">*</span>Чтобы подать материал, заполните форму</p>
+            </div>
+
+            <div class="form-container">
+                <form action="post" class="form f-send-materials" enctype="multipart/form-data">
+                    
+                    <div class="input-o-w fio-wrap">
+                        <label for="surname">Фамилия<span class="note-star">*</span></label>
+                        <div class="input-i-w">
+                            <input type="text" class="input " name="surname" id="surname" required placeholder="Фамилия">
+                        </div>
+                    </div>
+
+                    <div class="input-o-w fio-wrap">
+                        <label for="name">Имя<span class="note-star">*</span></label>
+                        <div class="input-i-w">
+                            <input type="text" class="input " name="name" id="name" required placeholder="Имя">
+                        </div>
+                    </div>
+                    
+                    <div class="input-o-w fio-wrap">
+                        <label for="patronymic">Отчество</label>
+                        <div class="input-i-w">
+                            <input type="text" class="input " name="patronymic" id="patronymic" placeholder="Отчество"  >
+                        </div>
+                    </div>
+
+                    <div class="input-o-w">
+                        <label for="organization">Организация<span class="note-star">*</span></label>
+                        <div class="input-i-w">
+                            <input type="text" class="input " name="organization" id="organization" placeholder="Организация" required>
+                        </div>
+                    </div>
+
+                    <div class="input-o-w">
+                        <label for="email">Электронная почта<span class="note-star">*</span></label>
+                        <div class="input-i-w">
+                            <input type="email" class="input " name="email" id="email" placeholder="Электронная почта" required>
+                        </div>
+                    </div>
+
+                    <div class="input-o-w">
+                        <label for="app-num">Номер заявки</label>
+                        <div class="input-i-w">
+                            <input type="text" class="input " name="app-num" id="app-num" placeholder="Номер заявки">
+                        </div>
+                    </div>
+
+                    <div class="input-o-w">
+                        <label for="app-file"><span class="note-star">*</span>Прикрепите файл (WORD)</label>
+                        <div class="input-i-w">
+                            <div class="input file-input-name">
+                                <div class="add-file">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+
+                                <input type="file" name="app-file" class="file-input" id="app-file" accept=".doc, .docx">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="approve-block">
+                        <label for="approve" class="easyCheckbox">
+                            <input class ='easyCheckbox__hidden-checkbox' type="checkbox" name="approve" id="approve">
+                            <div class="easyCheckbox__visible-checkbox easyCheckbox__square"></div>
+                            <p class="easyCheckbox__text">Отправляя форму я соглашаюсь с <a href="#">политикой безопасности</a> и соглашаюсь на <a href="#">обработку персональных данных</a></p>    
+                        </label>  
+                    </div>
+                    <div class="sendform-btn--block">
+                        <button class="sendform-btn" >
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="form-decoration">
+            <img src="assets/img/4561.png" alt="">
+        </div>
+    </section>
+
+   
+
+</main>
+@@include('parts_of_tepmplate/footer.html')

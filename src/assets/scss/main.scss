@@ -10,6 +10,14 @@
 
 @import 'units/page-name/_page-name.scss';
 
+@import 'units/forms/_forms.scss';
+
+@import 'units/easyRadioCheck/_easyRadioCheck.scss';
+@import 'units/easySelect/_easySelect.scss';
+@import 'units/keyspeakers/_keyspeakers.scss';
+
+
+
 *{
 	margin: 0;
 	padding: 0;
@@ -113,20 +121,17 @@ main{
 
 	
 
-	.margin-v-15{
-		margin-top: 15px;
-		margin-bottom: 15px;
-	}
+	
 
-	.note-star{
-		color: #ED0101;
-	}
+	
 
 	.text-upper{
 		text-transform: uppercase;
 	}
 }
-
+.note-star{
+	color: #ED0101;
+}
 
 .page-decoration-1{
 	width: 525px;
@@ -1000,7 +1005,10 @@ main{
 		font-size: 18px;
 	}
 }
-
+.margin-v-15{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
 .margin-bottom-35{
 	margin-bottom: 35px;
 }

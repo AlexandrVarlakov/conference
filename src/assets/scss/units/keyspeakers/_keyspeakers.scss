@@ -1,0 +1,111 @@
+.speakers-list{
+    margin: 80px 0;
+}
+.speaker-big{
+    margin: 65px 0;
+}
+.speaker-big__title{
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600 !important;
+
+    @media (max-width: 1024px){
+        font-size: 20px !important;
+    }
+}
+
+.speaker-big__portrait{
+    max-width: 360px;
+    width: 100%;
+    margin: 25px auto ;
+    
+}
+.speaker-big__portrait--inner{
+    width: 100%;
+    padding-bottom: 125%;
+    position: relative;
+
+    img{
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        height: 100%;
+        max-height: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+    }
+}
+
+
+.speaker-small{
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    grid-gap: 10px 40px;
+    margin: 65px 0;
+    .text{
+        margin: 0;
+    }
+
+    @media (max-width: 768px){
+        grid-template-columns: 1fr;
+
+        grid-gap: 25px;
+    }
+}
+.speaker-small__title{
+    
+    font-weight: 600 !important;
+
+    @media (max-width: 1024px){
+        font-size: 20px !important;
+    }
+    @media (max-width: 768px){
+        text-align: center;
+        order: 1;
+    }
+}
+.speaker-small__portrait{
+    width: 100%;    
+    grid-row: span 3;
+    @media (max-width: 768px){
+        grid-row: unset;
+        max-width: 360px;
+        margin: 0 auto;
+        order: 2;
+    }
+}
+.speaker-small__portrait--inner{
+    width: 100%;
+    padding-bottom: 125%;
+    position: relative;
+
+    img{
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        height: 100%;
+        max-height: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+    }
+}
+
+.speaker-small__theme{
+    @media (max-width: 768px){
+        order: 3;
+    }
+}
+
+.speaker-small__biography{
+    @media (max-width: 768px){
+        order: 4;
+    }
+}

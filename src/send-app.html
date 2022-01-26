@@ -1,0 +1,210 @@
+@@include('parts_of_tepmplate/head.html')
+@@include('parts_of_tepmplate/header.html')
+<main>
+    <section class="page-name">
+        <h1 class="page-name__title">Подача заявок</h1>
+
+        <h3 class="page-name__conference">Конференция</h3>
+
+        <div class="page-name__decoration-1"></div>
+        <div class="page-name__decoration-2">
+            <div class="page-name__i-round-1"></div>
+            <div class="page-name__i-round-2">
+                
+            </div>
+            <div class="page-name__i-round-3">
+                
+            </div>
+        </div>
+    </section>
+
+
+    <section class="content section-with-form">
+        <div class="content__inner">
+            <div class="text-block margin-bottom-45">
+                <h2 class="title">Форма подачи заявок</h2>
+                <p class="text margin-v-15"><span class="note-star">*</span>Чтобы принять участие, заполните форму</p>
+            </div>
+
+            <div class="form-container">
+                <form action="post" class="form f-send-materials" enctype="multipart/form-data">
+                    
+                    <div class="input-o-w fio-wrap">
+                        <label for="surname">Фамилия<span class="note-star">*</span></label>
+                        <div class="input-i-w">
+                            <input type="text" class="input " name="surname" id="surname" required placeholder="Фамилия">
+                        </div>
+                    </div>
+
+                    <div class="input-o-w fio-wrap">
+                        <label for="name">Имя<span class="note-star">*</span></label>
+                        <div class="input-i-w">
+                            <input type="text" class="input " name="name" id="name" required placeholder="Имя">
+                        </div>
+                    </div>
+                    
+                    <div class="input-o-w fio-wrap">
+                        <label for="patronymic">Отчество</label>
+                        <div class="input-i-w">
+                            <input type="text" class="input " name="patronymic" id="patronymic" placeholder="Отчество"  >
+                        </div>
+                    </div>
+
+                    <div class="input-o-w">
+                        <label for="organization">Организация<span class="note-star">*</span></label>
+                        <div class="input-i-w">
+                            <input type="text" class="input " name="organization" id="organization" placeholder="Организация" required>
+                        </div>
+                    </div>
+
+                    <div class="input-o-w">
+                        <label for="email">Электронная почта<span class="note-star">*</span></label>
+                        <div class="input-i-w">
+                            <input type="email" class="input " name="email" id="email" placeholder="Электронная почта" required>
+                        </div>
+                    </div>
+
+
+                    <div class="input-o-w">
+                        <label for="post">Должность<span class="note-star">*</span></label>
+                        <div class="input-i-w">
+                            <input type="text" class="input " name="post" id="post" placeholder="Должность" required>
+                        </div>
+                    </div>
+
+
+
+                    <div class="input-o-w">
+                        <label for="work-name">Название работы<span class="note-star">*</span></label>
+                        <div class="input-i-w">
+                            <input type="text" class="input " name="work-name" id="work-name" placeholder="Название работы" required>
+                        </div>
+                    </div>
+
+                    <div class="input-o-w">
+                        <label for="annotation">Аннотация<span class="note-star">*</span></label>
+                        <div class="input-i-w">
+                            <input type="text" class="input " name="annotation" id="annotation" placeholder="Аннотация">
+                        </div>
+                    </div>
+
+
+                    <div class="input-o-w">
+                        <label for="section-name-1">Секция<span class="note-star">*</span></label>
+                        <div class="input-i-w">
+                            <div class="easySelect">
+                                <div class="easySelect__vis-value">
+                                    <div class="easySelect__cur-value" data-value="">
+                                        Секция
+                                    </div>
+                                    <input type="text" name="section-name" class="easySelect__hide-input">
+                                    
+                                    <div class="easySelect__arrow">
+                                        <svg width="21" height="13" viewBox="0 0 21 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 1L11 12L20.5 1" stroke="#0C44AC"/>
+                                        </svg>
+                                            
+                                    </div>
+
+                                </div>
+                                <ul class="easySelect__options-list" data-state="rolled" data-hide_checked="false">
+                                    <li class="easySelect__option" data-value="0">Методы снижения шума и вредных выбросов при проектировании высокоскоростных летательных аппаратов</li>
+                                    <li class="easySelect__option" data-value="1">Общие вопросы аэродинамики и проектирования летательных аппаратов нового поколения</li>
+                                    <li class="easySelect__option" data-value="2">Методы проектирования силовых установок</li>
+                                    <li class="easySelect__option" data-value="3">Конструкция, прочность, новые материалы</li>
+                                    <li class="easySelect__option" data-value="4">Искусственный интеллект, интеграция авионики</li>
+                                    <li class="easySelect__option" data-value="5">Сертификация воздушных судов нового поколения</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-o-w">
+                        <label for="expert-opinion"><span class="note-star">*</span>Экспертное заключение (PDF)</label>
+                        <div class="input-i-w">
+                            <div class="input file-input-name">
+                                <div class="add-file">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+
+                                <input type="file" name="expert-opinion" class="file-input" id="expert-opinion" accept=".pdf">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-o-w">
+                        <label for="theses"><span class="note-star">*</span>Тезисы доклада (WORD)</label>
+                        <div class="input-i-w">
+                            <div class="input file-input-name">
+                                <div class="add-file">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+
+                                <input type="file" name="theses" class="file-input" id="theses" accept=".doc, .docx">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="input-o-w">
+                        <label for="f-participation"><span class="note-star">*</span>Форма участия</label>
+                        <div class="input-i-w">
+                            <div class="radio-wrap">
+                                <label for="f-participation-rb-1" class="easyRadio">
+                                    <input type="radio" name="f-participation-rb" id="f-participation-rb-1" value="0" class="easyRadio__hidden-radio" checked>
+                                    <div class="easyRadio__visible-radio easyRadio__round"></div>
+                                    <p class="easyRadio__text">Очно</p>
+                                </label>
+                                <label for="f-participation-rb-2" class="easyRadio">
+                                    <input type="radio" name="f-participation-rb" id="f-participation-rb-2" value="1" class="easyRadio__hidden-radio">
+                                    <div class="easyRadio__visible-radio easyRadio__round"></div>
+                                    <p class="easyRadio__text">Дистанционно</p>
+                                </label>
+                            </div>                            
+                        </div>
+                    </div>
+
+                    <div class="input-o-w">
+                        <label for="scopus-pub-1"><span class="note-star">*</span>Публикация Scopus</label>
+                        <div class="input-i-w">
+                            <div class="radio-wrap">
+                                <label for="scopus-pub-1" class="easyRadio">
+                                    <input type="radio" name="scopus-pub" id="scopus-pub-1" value="0" class="easyRadio__hidden-radio" checked>
+                                    <div class="easyRadio__visible-radio easyRadio__round"></div>
+                                    <p class="easyRadio__text">Да</p>
+                                </label>
+                                <label for="scopus-pub-2" class="easyRadio">
+                                    <input type="radio" name="scopus-pub" id="scopus-pub-2" value="1" class="easyRadio__hidden-radio">
+                                    <div class="easyRadio__visible-radio easyRadio__round"></div>
+                                    <p class="easyRadio__text">Нет</p>
+                                </label>
+                            </div>                            
+                        </div>
+                    </div>
+
+                    <div class="approve-block">
+                        <label for="approve" class="easyCheckbox">
+                            <input class ='easyCheckbox__hidden-checkbox' type="checkbox" name="approve" id="approve">
+                            <div class="easyCheckbox__visible-checkbox easyCheckbox__square"></div>
+                            <p class="easyCheckbox__text">Отправляя форму я соглашаюсь с <a href="#">политикой безопасности</a> и соглашаюсь на <a href="#">обработку персональных данных</a></p>    
+                        </label>  
+                    </div>
+                    <div class="sendform-btn--block">
+                        <button class="sendform-btn" >
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="form-decoration">
+            <img src="assets/img/4561.png" alt="">
+        </div>
+    </section>
+
+    
+</main>
+@@include('parts_of_tepmplate/footer.html')

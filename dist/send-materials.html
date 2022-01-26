@@ -189,10 +189,9 @@
 </div>
 </header>
 <!--END: header section-->
-
-<main>
+<main >
     <section class="page-name">
-        <h1 class="page-name__title">Публикация РИНЦ</h1>
+        <h1 class="page-name__title">Подача материалов</h1>
 
         <h3 class="page-name__conference">Конференция</h3>
 
@@ -209,29 +208,95 @@
     </section>
 
 
-    <section class="content">
+    <section class="content section-with-form">
         <div class="content__inner">
-            <div class="text-block">
-                <h2 class="title">Публикация РИНЦ</h2>
-                <p class="text">По итогам конференции будет выпущен сборник тезисов с индексацией в РИНЦ. </p>
-                <p class="text">Тезисы доклада объёмом от 1500 до 2500 знаков, включая пробелы, без учёта заголовка, имён авторов и названия организации должны быть подготовлены на русском 
-                    и английском языках. </p>
-                <p class="text">Шаблон оформления тезисов можно скачать по ссылке</p>
-
-                <div class="btn-block">
-                    <a href="assets/docs/test.doc" download class="download-link">
-                        Скачать Word-файл с шаблоном
-                        <svg width="63" height="16" viewBox="0 0 63 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M62.7071 8.70711C63.0976 8.31658 63.0976 7.68342 62.7071 7.29289L56.3431 0.928932C55.9526 0.538408 55.3195 0.538408 54.9289 0.928932C54.5384 1.31946 54.5384 1.95262 54.9289 2.34315L60.5858 8L54.9289 13.6569C54.5384 14.0474 54.5384 14.6805 54.9289 15.0711C55.3195 15.4616 55.9526 15.4616 56.3431 15.0711L62.7071 8.70711ZM1 7C0.447716 7 0 7.44772 0 8C0 8.55228 0.447716 9 1 9V7ZM62 7L1 7V9L62 9V7Z" fill="#0C44AC"/>
-                        </svg>
-                    </a>
-                </div>
-
-                <p class="text margin-v-15">Тезисы докладов необходимо прикреплять при подаче заявки.</p>    
-                <p class="text margin-v-15">Тезисы докладов проверяются Оргкомитетом конференции на антиплагиат.</p>
+            <div class="text-block margin-bottom-45">
+                <h2 class="title">Форма подачи материалов</h2>
+                <p class="text margin-v-15"><span class="note-star">*</span>Чтобы подать материал, заполните форму</p>
             </div>
+
+            <div class="form-container">
+                <form action="post" class="form f-send-materials" enctype="multipart/form-data">
+                    
+                    <div class="input-o-w fio-wrap">
+                        <label for="surname">Фамилия<span class="note-star">*</span></label>
+                        <div class="input-i-w">
+                            <input type="text" class="input " name="surname" id="surname" required placeholder="Фамилия">
+                        </div>
+                    </div>
+
+                    <div class="input-o-w fio-wrap">
+                        <label for="name">Имя<span class="note-star">*</span></label>
+                        <div class="input-i-w">
+                            <input type="text" class="input " name="name" id="name" required placeholder="Имя">
+                        </div>
+                    </div>
+                    
+                    <div class="input-o-w fio-wrap">
+                        <label for="patronymic">Отчество</label>
+                        <div class="input-i-w">
+                            <input type="text" class="input " name="patronymic" id="patronymic" placeholder="Отчество"  >
+                        </div>
+                    </div>
+
+                    <div class="input-o-w">
+                        <label for="organization">Организация<span class="note-star">*</span></label>
+                        <div class="input-i-w">
+                            <input type="text" class="input " name="organization" id="organization" placeholder="Организация" required>
+                        </div>
+                    </div>
+
+                    <div class="input-o-w">
+                        <label for="email">Электронная почта<span class="note-star">*</span></label>
+                        <div class="input-i-w">
+                            <input type="email" class="input " name="email" id="email" placeholder="Электронная почта" required>
+                        </div>
+                    </div>
+
+                    <div class="input-o-w">
+                        <label for="app-num">Номер заявки</label>
+                        <div class="input-i-w">
+                            <input type="text" class="input " name="app-num" id="app-num" placeholder="Номер заявки">
+                        </div>
+                    </div>
+
+                    <div class="input-o-w">
+                        <label for="app-file"><span class="note-star">*</span>Прикрепите файл (WORD)</label>
+                        <div class="input-i-w">
+                            <div class="input file-input-name">
+                                <div class="add-file">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+
+                                <input type="file" name="app-file" class="file-input" id="app-file" accept=".doc, .docx">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="approve-block">
+                        <label for="approve" class="easyCheckbox">
+                            <input class ='easyCheckbox__hidden-checkbox' type="checkbox" name="approve" id="approve">
+                            <div class="easyCheckbox__visible-checkbox easyCheckbox__square"></div>
+                            <p class="easyCheckbox__text">Отправляя форму я соглашаюсь с <a href="#">политикой безопасности</a> и соглашаюсь на <a href="#">обработку персональных данных</a></p>    
+                        </label>  
+                    </div>
+                    <div class="sendform-btn--block">
+                        <button class="sendform-btn" >
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="form-decoration">
+            <img src="assets/img/4561.png" alt="">
         </div>
     </section>
+
+   
 
 </main>
 <!--BEGIN: footer section-->
