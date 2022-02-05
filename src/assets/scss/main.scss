@@ -820,6 +820,30 @@ main{
 	}
 	
 }
+
+.table.timetable{
+	th, td{
+		padding: 15px 5px;
+		font-size: 14px;
+		overflow-wrap: break-word;  /* не поддерживает IE, Firefox; является копией word-wrap */ 
+			word-wrap: break-word;
+			word-break: break-all;  /* не поддерживает Opera12.14, значение keep-all не поддерживается IE, Chrome */ 
+			line-break: loose;  /* нет поддержки для русского языка */ 
+			-webkit-hyphens: auto; -ms-hyphens: auto; hyphens: auto;  
+		&:nth-of-type(1){
+			width: 20%;
+		}
+		&:nth-of-type(2){
+			width: 60%;
+		}
+		&:nth-of-type(3){
+			width: 20%;
+		}
+	}
+}
+
+
+
 .table-comment{
 	font-size: calc(7px + .7vw);
 	line-height: 1.2;
@@ -1055,3 +1079,5 @@ main{
 		margin-bottom: 45px;
 	}
 }
+
+

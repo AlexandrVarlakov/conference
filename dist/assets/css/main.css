@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Montserrat*/
 @font-face {
   font-family: 'Montserrat';
@@ -2612,6 +2613,26 @@ main {
       .table thead th {
         font-size: 16px;
         padding: 15px 10px; } }
+
+.table.timetable th, .table.timetable td {
+  padding: 15px 5px;
+  font-size: 14px;
+  overflow-wrap: break-word;
+  /* не поддерживает IE, Firefox; является копией word-wrap */
+  word-wrap: break-word;
+  word-break: break-all;
+  /* не поддерживает Opera12.14, значение keep-all не поддерживается IE, Chrome */
+  line-break: loose;
+  /* нет поддержки для русского языка */
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto; }
+  .table.timetable th:nth-of-type(1), .table.timetable td:nth-of-type(1) {
+    width: 20%; }
+  .table.timetable th:nth-of-type(2), .table.timetable td:nth-of-type(2) {
+    width: 60%; }
+  .table.timetable th:nth-of-type(3), .table.timetable td:nth-of-type(3) {
+    width: 20%; }
 
 .table-comment {
   font-size: calc(7px + .7vw);
